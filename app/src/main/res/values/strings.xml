@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Preference Kotlin</string>
+    <string name="movies_fragment_text">Movies Fragment</string>
+
 </resources>
