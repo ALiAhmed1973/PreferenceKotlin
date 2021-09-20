@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:title="General"
+        app:iconSpaceReserved="false">
+        <EditTextPreference
+            android:defaultValue="@string/defValue_status"
+            android:title="@string/title_status"
+            android:key="@string/key_status"
+            app:dialogTitle="@string/dialog_title_status"
+            app:iconSpaceReserved="false"
+            app:useSimpleSummaryProvider="true"
+            >
+        </EditTextPreference>
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:title="@string/title_notification"
+            android:key="@string/key_notification"
+            android:summary="@string/summary_notification"
+            app:iconSpaceReserved="false">
+        </SwitchPreferenceCompat>
+        <ListPreference
+            android:dependency="@string/key_notification"
+            android:dialogTitle="@string/dialog_title_refresh_data_time"
+            android:entries="@array/entries_refresh_data_time"
+            android:entryValues="@array/values_refresh_data_time"
+            android:key="@string/key_refersh_data_time"
+            android:title="@string/title_refresh_data_time"
+            app:iconSpaceReserved="false"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/title_app"
+        app:iconSpaceReserved="false">
+        <Preference
+            android:title="@string/title_account_settings"
+            android:key="@string/key_account_settings"
+            android:summary="@string/summary_account_settings"
+            app:iconSpaceReserved="false"
+            >
+        </Preference>
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:title="@string/title_auto_play"
+            android:key="@string/key_auto_play"
+            android:summary="@string/summary_auto_play"
+            app:iconSpaceReserved="false">
+        </CheckBoxPreference>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/title_about"
+        app:iconSpaceReserved="false">
+        <Preference
+            android:title="@string/title_app_version"
+            android:key="@string/key_app_version"
+            android:summary="@string/summary_app_version"
+            app:iconSpaceReserved="false" />
+        <Preference
+            android:title="@string/title_privacy_policy"
+            android:key="@string/key_privacy_policy"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+</PreferenceScreen>
